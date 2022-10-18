@@ -1,0 +1,9 @@
+main:
+  - title: "最新文章"
+    url: /posts/
+  - title: "操作指南"
+    url: /user-guide/
+  - title: "常見問題"
+    url: /faq/
+  - title: "關於"
+    url: /about/

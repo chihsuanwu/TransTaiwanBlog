@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+
+    <div id="demo"></div>
+    <!-- <iframe id="data" src="https://api.transtaiwan.com/tra_train_series.json">
+    </iframe> -->
+    <script language="javascript">
+
+        window.addEventListener('load', function() {
+            console.log("load");
+
+            jsonp('https://api.transtaiwan.com/tra_train_series.json', {
+
+            }, 'onSuccess');
+            // console.log(document.getElementById('data').contentWindow.document);
+        })
+
+        function jsonp(url, data={}, callback) {
+            const script = document.createElement('script');
+            url += `&callback=${callback}`;
+            script.src = url;
+            document.body.append(script);
+        }
+
+        function onSuccess(data) {
+            console.log(data);
+        }
+
+    </script>
+</body>
+</html>
